@@ -1,0 +1,8 @@
+{
+    "watchForFileChanges":false,
+    "chromeWebSecurity": false,
+    "viewportHeight": 700,
+    "viewportWeight": 1440,
+    "experimentalSessionAndOrigin": true
+
+}
