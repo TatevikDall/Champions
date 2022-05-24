@@ -1,5 +1,7 @@
 /// <reference types = "cypress"/>
 
+
+
 describe(
     'page display on medium size screen',
     {
@@ -35,14 +37,14 @@ describe(
     })
     
     cy.wait(10000)
-    cy.get('.account-profile__account-settings__button > svg').click()
+    cy.get('[data-id="account_profile_settings_show_button"]', {timeout:6000}).click()
     cy.get('[data-id="account_settings_Change Avatar"]')
         .should('contain', 'Change Avatar')
         .click()
     cy.get('.avatar-select-close')
         .should('be.visible') 
         .click() 
-    cy.get('.account-profile__account-settings__button > svg')
+    cy.get('[data-id="account_profile_settings_show_button"]')
         .click()
     cy.get('[data-id="account_settings_Logout"]').click()
     cy.get('.right-sidebar-layout__header > :nth-child(1) > :nth-child(1)').should('have.text', 'Login')
